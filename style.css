@@ -169,12 +169,15 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(img/c1.jpg);
+    background-image: url(img/c.1.jpg);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
 }
-.hero::after {
+/* .hero::after {
     content: '';
     display: block;
     position: absolute;
@@ -182,10 +185,23 @@ body {
     height: 15%;
     bottom: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 60%);
+} */
+.hero .mask-container {
+    position: absolute;
+    /* background: red; */
+    inset: 0;
+    -webkit-mask-image: url(img/svg.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 .hero .content {
     padding: 1.4rem 7%;
-    max-width: 60rem;
+    /* max-width: 60rem; */
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 80px;
 }
 .hero .content h1 {
     font-family: 'Ubuntu', sans-serif;
@@ -262,6 +278,10 @@ body {
 }
 .about .row .about-img img {
     width: 100%;
+    -webkit-mask-image: url(img/menu/c6.svg);
+    -webkit-mask-size: 50%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 .about .row .content {
     flex: 1 1 35rem;
